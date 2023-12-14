@@ -64,7 +64,7 @@
             // Choose from Mapbox's core styles, or make your own style with Mapbox Stu dio
             style: 'mapbox://styles/feipower/clp01c3ys00tc01qq9h3p1s8p',
             zoom: 14,
-            center: [-103.387367, 20.674337]
+            center: [-103.722471, 19.246659]
         });
         // Add controls
         const nav = new mapboxgl.NavigationControl();
@@ -387,6 +387,13 @@
             "('D-', 6)": { color: '#587498', label: 'D-', description: 'En el 53% de los hogares el jefe tiene estudios hasta primaria. El 86% de las viviendas en donde habitan, tienen uno o dos dormitorios. Solamente el 14% tiene internet fijo en la vivienda. Poco menos de la mitad de su gasto se destina a la alimentación (48%).'},
             "('E', 7)": { color: '#343d46', label: 'E', description: 'La mayoría de los hogares (82%) tienen un jefe con estudios no mayores a primaria. Siete de cada diez viviendas tienen solamente un dormitorio y 83% no cuentan con baño completo. La tenencia de internet en la vivienda es muy bajo (0.3%) Más de la mitad del gasto se asigna a alimentos (52%) y solo el 1% a educación.'},
             // Add other categories similarly
+        };
+
+        const trafficLegendData = {
+            "low": { color: '#5ebd3e', label: 'A/B', description: ''},
+            "medium": { color: '#ffb900', label: 'C+', description: ''},
+            "heavy": { color: '#f78200', label: 'C', description: ''},
+            "severe": { color: '#e23838', label: 'C-', description: ''},
         };
 
         function updateNseLegend() {
