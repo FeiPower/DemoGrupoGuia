@@ -21,30 +21,39 @@
         </div>
         <div class = "panel-content">
             <h3>Grupo Guía</h3>
+            <div class="zoom-level-display">
+                <label for="zoom-level">Zoom level: </label>
+                <span id="zoom-level"></span>
+            </div>
+            <div>
+                <label for="heatmap-opacity-slider">Heatmap Opacity: </label>
+                <input type="range" id="heatmap-opacity-slider" min="0" max="1" step="0.01" value="1">
+            </div>
             <h3>Datos</h3>
             <label><input type="checkbox" id="toggleNseZP">Nivel socioeconómico (código postal)</label>
             <label><input type="checkbox" id="toggleTrafficdata">Tráfico (Live)</label>
             <h3>Puntos de interés</h3>
-            <label><input type="checkbox" id="toggleTiendasdeautoservicio" >Tiendas de autoservicio. <span id="tiendasdeautoservicio-count">( Puntos visibles: 0 )</span></label>
-            <label><input type="checkbox" id="toggleTiendasdepartamentales" >Tiendas departamentales. <span id="tiendasdepartamentales-count">( Puntos visibles: 0 )</span></label>
-            <label><input type="checkbox" id="toggleTiendasdeconveniencia" >Tiendas de conveniencia. <span id="tiendasdeconveniencia-count">( Puntos visibles: 0 )</span></label>
-            <label><input type="checkbox" id="toggleRestaurantes" >Restaurantes. <span id="restaurantes-count">( Puntos visibles: 0 )</span></label>
-            <label><input type="checkbox" id="toggleCafeterias" >Cafeterías. <span id="cafeterias-count">( Puntos visibles: 0 )</span></label>
-            <label><input type="checkbox" id="toggleBaresycentrosnocturnos" >Bares y centros nocturnos. <span id="baresycentrosnocturnos-count">( Puntos visibles: 0 )</span></label>
-            <label><input type="checkbox" id="toggleHospitalesyclinicas" >Hospitales y clínicas. <span id="hospitalesyclinicas-count">( Puntos visibles: 0 )</span></label>
-            <label><input type="checkbox" id="toggleFarmacias" >Farmacias. <span id="farmacias-count">( Puntos visibles: 0 )</span></label>
-            <label><input type="checkbox" id="toggleClinicasveterinarias" >Clínicas veterinarias. <span id="clinicasveterinarias-count">( Puntos visibles: 0 )</span></label>
-            <label><input type="checkbox" id="toggleBancos" >Bancos. <span id="bancos-count">( Puntos visibles: 0 )</span></label>
-            <label><input type="checkbox" id="toggleCajerosautomaticos" >Cajeros automáticos. <span id="cajerosautomaticos-count">( Puntos visibles: 0 )</span></label>
-            <label><input type="checkbox" id="toggleCentrosreligiosos" >Centros religiosos. <span id="centrosreligiosos-count">( Puntos visibles: 0 )</span></label>
-            <label><input type="checkbox" id="toggleHoteles" >Hoteles. <span id="hoteles-count">( Puntos visibles: 0 )</span></label>
-            <label><input type="checkbox" id="toggleCasinos" >Casinos. <span id="casinos-count">( Puntos visibles: 0 )</span></label>
-            <label><input type="checkbox" id="toggleGimnasios" >Gimnasios. <span id="gimnasios-count">( Puntos visibles: 0 )</span></label>
-            <label><input type="checkbox" id="toggleAcademiasdeportivas" >Academias deportivas. <span id="academiasdeportivas-count">( Puntos visibles: 0 )</span></label>
-            <label><input type="checkbox" id="toggleCamposdegolf" >Campos de golf. <span id="camposdegolf-count">( Puntos visibles: 0 )</span></label>
-            <label><input type="checkbox" id="toggleBoliches" >Boliches. <span id="boliches-count">( Puntos visibles: 0 )</span></label>
-            <label><input type="checkbox" id="toggleEscuelas">Escuelas. <span id="escuelas-count">( Puntos visibles: 0 )</span></label>
-            <label><input type="checkbox" id="toggleCines">Cines. <span id="cines-count">( Puntos visibles: 0 )</span></label>
+            <p>Puntos | Mapa de calor</p>
+            <label><input type="checkbox" id="toggleTiendasdeautoservicioPoints"><input type="checkbox" id="toggleTiendasdeautoservicioHeatmap" >Tiendas de autoservicio. <span id="tiendasdeautoservicio-count">( Puntos visibles: 0 )</span></label>
+            <label><input type="checkbox" id="toggleTiendasdepartamentalesPoints"><input type="checkbox" id="toggleTiendasdepartamentalesHeatmap">Tiendas departamentales. <span id="tiendasdepartamentales-count">( Puntos visibles: 0 )</span></label>
+            <label><input type="checkbox" id="toggleTiendasdeconvenienciaPoints"><input type="checkbox" id="toggleTiendasdeconvenienciaHeatmap">Tiendas de conveniencia. <span id="tiendasdeconveniencia-count">( Puntos visibles: 0 )</span></label>
+            <label><input type="checkbox" id="toggleRestaurantesPoints"><input type="checkbox" id="toggleRestaurantesHeatmap">Restaurantes. <span id="restaurantes-count">( Puntos visibles: 0 )</span></label>
+            <label><input type="checkbox" id="toggleCafeteriasPoints"><input type="checkbox" id="toggleCafeteriasHeatmap">Cafeterías. <span id="cafeterias-count">( Puntos visibles: 0 )</span></label>
+            <label><input type="checkbox" id="toggleBaresycentrosnocturnosPoints"><input type="checkbox" id="toggleBaresycentrosnocturnosHeatmap">Bares y centros nocturnos. <span id="baresycentrosnocturnos-count">( Puntos visibles: 0 )</span></label>
+            <label><input type="checkbox" id="toggleHospitalesyclinicasPoints"><input type="checkbox" id="toggleHospitalesyclinicasHeatmap">Hospitales y clínicas. <span id="hospitalesyclinicas-count">( Puntos visibles: 0 )</span></label>
+            <label><input type="checkbox" id="toggleFarmaciasPoints"><input type="checkbox" id="toggleFarmaciasHeatmap">Farmacias. <span id="farmacias-count">( Puntos visibles: 0 )</span></label>
+            <label><input type="checkbox" id="toggleClinicasveterinariasPoints"><input type="checkbox" id="toggleClinicasveterinariasHeatmap">Clínicas veterinarias. <span id="clinicasveterinarias-count">( Puntos visibles: 0 )</span></label>
+            <label><input type="checkbox" id="toggleBancosPoints"><input type="checkbox" id="toggleBancosHeatmap">Bancos. <span id="bancos-count">( Puntos visibles: 0 )</span></label>
+            <label><input type="checkbox" id="toggleCajerosautomaticosPoints"><input type="checkbox" id="toggleCajerosautomaticosHeatmap">Cajeros automáticos. <span id="cajerosautomaticos-count">( Puntos visibles: 0 )</span></label>
+            <label><input type="checkbox" id="toggleCentrosreligiososPoints"><input type="checkbox" id="toggleCentrosreligiososHeatmap">Centros religiosos. <span id="centrosreligiosos-count">( Puntos visibles: 0 )</span></label>
+            <label><input type="checkbox" id="toggleHotelesPoints"><input type="checkbox" id="toggleHotelesHeatmap">Hoteles. <span id="hoteles-count">( Puntos visibles: 0 )</span></label>
+            <label><input type="checkbox" id="toggleCasinosPoints"><input type="checkbox" id="toggleCasinosHeatmap">Casinos. <span id="casinos-count">( Puntos visibles: 0 )</span></label>
+            <label><input type="checkbox" id="toggleGimnasiosPoints"><input type="checkbox" id="toggleGimnasiosHeatmap">Gimnasios. <span id="gimnasios-count">( Puntos visibles: 0 )</span></label>
+            <label><input type="checkbox" id="toggleAcademiasdeportivasPoints"><input type="checkbox" id="toggleAcademiasdeportivasHeatmap">Academias deportivas. <span id="academiasdeportivas-count">( Puntos visibles: 0 )</span></label>
+            <label><input type="checkbox" id="toggleCamposdegolfPoints"><input type="checkbox" id="toggleCamposdegolfHeatmap">Campos de golf. <span id="camposdegolf-count">( Puntos visibles: 0 )</span></label>
+            <label><input type="checkbox" id="toggleBolichesPoints"><input type="checkbox" id="toggleBolichesHeatmap">Boliches. <span id="boliches-count">( Puntos visibles: 0 )</span></label>
+            <label><input type="checkbox" id="toggleEscuelasPoints"><input type="checkbox" id="toggleEscuelasHeatmap">Escuelas. <span id="escuelas-count">( Puntos visibles: 0 )</span></label>
+            <label><input type="checkbox" id="toggleCinesPoints"><input type="checkbox" id="toggleCinesHeatmap">Cines. <span id="cines-count">( Puntos visibles: 0 )</span></label>
             </div>
     </div>
     <div id="map"></div>
@@ -64,7 +73,7 @@
             // Choose from Mapbox's core styles, or make your own style with Mapbox Stu dio
             style: 'mapbox://styles/feipower/clp01c3ys00tc01qq9h3p1s8p',
             zoom: 14,
-            center: [-103.722471, 19.246659]
+            center: [-103.387367, 20.674337]
         });
         // Add controls
         const nav = new mapboxgl.NavigationControl();
@@ -74,6 +83,7 @@
             maxWidth: 500,
             unit: 'metric'
         });
+
         map.addControl(scale, 'bottom-left');
 
         const fullscreen = new mapboxgl.FullscreenControl();
@@ -85,68 +95,71 @@
             },
             trackUserLocation: true
         });
-        map.addControl(geolocate, 'bottom-right');    
+
+        map.addControl(geolocate, 'bottom-right');   
+        
         
         // Wait until the map has finished loading.
 
         const popup = new mapboxgl.Popup();
 
         map.on('mousemove', (event) => {
-        const features = map.queryRenderedFeatures(event.point, {
-            layers: ['tiendasdeautoservicio',
-                        'tiendasdepartamentales',
-                        'tiendasdeconveniencia',
-                        'restaurantes',
-                        'cafeterias',
-                        'baresycentrosnocturnos',
-                        'hospitalesyclinicas',
-                        'farmacias',
-                        'clinicasveterinarias',
-                        'bancos',
-                        'cajerosautomaticos',
-                        'centrosreligiosos',
-                        'hoteles',
-                        'casinos',
-                        'gimnasios',
-                        'academiasdeportivas',
-                        'camposdegolf',
-                        'boliches',
-                        'escuelas',
-                        'cines',
-                        'trafficdata']
-        });
+        
+            const features = map.queryRenderedFeatures(event.point, {
+            layers: ['tiendasdeautoservicio-points',
+                        'tiendasdepartamentales-points',
+                        'tiendasdeconveniencia-points',
+                        'restaurantes-points',
+                        'cafeterias-points',
+                        'baresycentrosnocturnos-points',
+                        'hospitalesyclinicas-points',
+                        'farmacias-points',
+                        'clinicasveterinarias-points',
+                        'bancos-points',
+                        'cajerosautomaticos-points',
+                        'centrosreligiosos-points',
+                        'hoteles-points',
+                        'casinos-points',
+                        'gimnasios-points',
+                        'academiasdeportivas-points',
+                        'camposdegolf-points',
+                        'boliches-points',
+                        'escuelas-points',
+                        'cines-points']
+            });
 
-        if (!features.length) {
-            popup.remove();
-            return;
-        }
+            if (!features.length) {
+                popup.remove();
+                return;
+            }
 
-        const feature = features[0];
+            const feature = features[0];
 
-        const popupContent = `
-            <div>
-                <h2>${feature.properties.nom_estab}</h2>
-                <p>Actividad económica: ${feature.properties.nombre_act}</p>
-                <p>Razón social: ${feature.properties.raz_social}</p>
-                <p>Número de empleados: ${feature.properties.per_ocu}</p>
-                <p>C.P.: ${feature.properties.cod_postal}</p>  
-                <p>Municipio: ${feature.properties.municipio}</p>
-                <p>Estado: ${feature.properties.entidad}</p>
-                <p>Fuente: Directorio Estadístico Nacional de Unidades Económicas.</p>
-            </div>
-        `;
+            const popupContent = `
+                <div>
+                    <h2>${feature.properties.nom_estab}</h2>
+                    <p>Actividad económica: ${feature.properties.nombre_act}</p>
+                    <p>Razón social: ${feature.properties.raz_social}</p>
+                    <p>Número de empleados: ${feature.properties.per_ocu}</p>
+                    <p>C.P.: ${feature.properties.cod_postal}</p>  
+                    <p>Municipio: ${feature.properties.municipio}</p>
+                    <p>Estado: ${feature.properties.entidad}</p>
+                    <p>Fuente: Directorio Estadístico Nacional de Unidades Económicas.</p>
+                </div>
+            `;
 
-        popup
-            .setLngLat(feature.geometry.coordinates)
-            .setHTML(popupContent)
-            .addTo(map);
+            popup
+                .setLngLat(feature.geometry.coordinates)
+                .setHTML(popupContent)
+                .addTo(map);
 
-        map.getCanvas().style.cursor = features.length ? 'pointer' : '';
-        });
+            map.getCanvas().style.cursor = features.length ? 'pointer' : '';
+            });
 
         function addLayers(map, idPrefix, url, sourceLayer, color) {
-            const layerId = idPrefix;
-
+            const pointLayerId = idPrefix + '-points';
+            const heatmapLayerId = idPrefix + '-heatmap';
+            
             // Propiedades comunes de la capa
             const commonLayerProperties = {
                 type: 'circle',
@@ -171,13 +184,80 @@
                 'circle-stroke-color': '#000000',
                 'circle-stroke-width': 0.5
             };
-
-            // Añadiendo la capa al mapa
+            // Add heatmap layer
             map.addLayer({
-                id: layerId,
+                id: heatmapLayerId,
+                type: 'heatmap',
+                source: {
+                    type: 'vector',
+                    url: url
+                },
+                'source-layer': sourceLayer,
+                layout: {
+                    visibility: 'none'
+                },
+                'maxzoom': 18,
+                paint: {
+                    // Heatmap paint properties
+                    'heatmap-weight': {
+                        property: 'magnitude', // Replace with your property
+                        type: 'exponential',
+                        stops: [
+                            [0, 0],
+                            [5, 2]
+                        ] // Replace with your stops
+                    },
+                    'heatmap-intensity': {
+                        type: 'exponential',
+                        stops: [
+                            [8, 1],
+                            [18, 5]
+                        ] // Adjust as needed
+                    },
+                    'heatmap-color': [
+                        'interpolate',
+                        ['linear'],
+                        ['heatmap-density'],
+                        0, 'rgba(33,102,172,0)',
+                        0.2, 'rgb(103,169,207)',
+                        0.4, 'rgb(209,229,240)',
+                        0.6, 'rgb(253,219,199)',
+                        0.8, 'rgb(239,138,98)',
+                        1, 'rgb(178,24,43)'
+                    ],
+                    'heatmap-radius': {
+                        stops: [
+                            [10, 70],
+                            [18, 5]
+                        ] // Adjust as needed
+                    },
+                    'heatmap-opacity': {
+                        default: 1,
+                        stops: [
+                            [17, 1],
+                            [18, 0]]
+                    }
+                }
+            });
+
+            // Add point layer
+            map.addLayer({
+                id: pointLayerId,
+                type: 'circle',
+                source: {
+                    type: 'vector',
+                    url: url
+                },
+                'source-layer': sourceLayer,
+                layout: {
+                    visibility: 'none'
+                },
                 paint: layerPaint,
                 ...commonLayerProperties
-            });
+                 });
+
+            // Añadiendo la capa al mapa
+            
         };
 
         // Define your unique layer values
@@ -292,11 +372,24 @@
             addLayers(map, layer.idPrefix, layer.url, layer.sourceLayer, layer.color);
         });
         
+        // Event Listeners para los checkboxes de los vectores.
         layerData.forEach(layer => {
-            document.getElementById('toggle' + layer.idPrefix.charAt(0).toUpperCase() + layer.idPrefix.slice(1)).addEventListener('change', function(e) {
+            document.getElementById('toggle' + layer.idPrefix.charAt(0).toUpperCase() + layer.idPrefix.slice(1)+'Points').addEventListener('change', function(e) {
                 const isChecked = e.target.checked;
                 const visibility = isChecked ? 'visible' : 'none';
-                map.setLayoutProperty(layer.idPrefix, 'visibility', visibility);
+                map.setLayoutProperty(layer.idPrefix+'-points', 'visibility', visibility);
+
+                // Introduce a slight delay before updating the count
+                setTimeout(() => updatePointCount(layer.idPrefix), 300); // 300 ms delay
+            });
+        });
+
+        // Event Listeners para los checkboxes de los heatmaps.
+        layerData.forEach(layer => {
+            document.getElementById('toggle' + layer.idPrefix.charAt(0).toUpperCase() + layer.idPrefix.slice(1)+'Heatmap').addEventListener('change', function(e) {
+                const isChecked = e.target.checked;
+                const visibility = isChecked ? 'visible' : 'none';
+                map.setLayoutProperty(layer.idPrefix+'-heatmap', 'visibility', visibility);
 
                 // Introduce a slight delay before updating the count
                 setTimeout(() => updatePointCount(layer.idPrefix), 300); // 300 ms delay
@@ -328,12 +421,6 @@
             'Trafficdata'
         ];
 
-        ids.forEach(id => {
-            document.getElementById(`toggle${id}`).addEventListener('change', function() {
-                toggleLayer([id.toLowerCase(), `${id.toLowerCase()}2`], this.checked);
-            });
-        });
-
         // Minimize/maximize the layer control panel when the button is clicked
         document.getElementById('toggle-panel').addEventListener('click', function() {
             const panel = document.getElementById('layer-control-panel');
@@ -359,6 +446,7 @@
             }
 
         });
+
         document.getElementById('toggleTrafficdata').addEventListener('change', function() {
             let visibility = map.getLayoutProperty('trafficdata', 'visibility');
             
@@ -368,6 +456,7 @@
                 map.setLayoutProperty('trafficdata', 'visibility', 'visible');
             }
         });
+
         document.getElementById('toggleNseZP').addEventListener('change', function() {
             let visibility = map.getLayoutProperty('nsezp-labels', 'visibility');
             
@@ -413,21 +502,33 @@
         };
 
         function updatePointCount(layerId) {
-            const features = map.queryRenderedFeatures({ layers: [layerId] });
-            const count = features.length;
+            
+            // Ensure "-points" is only appended once
+            const fullLayerId = layerId.endsWith("-points") ? layerId : layerId + "-points";
+            const fullLayerId2 = layerId.endsWith("-heatmap") ? layerId : layerId + "-heatmap";
+    
+            const features = map.queryRenderedFeatures({ layers: [fullLayerId] });
+            const features2 = map.queryRenderedFeatures({ layers: [fullLayerId2] });
 
-            // Check if the layer is visible
-            const isVisible = map.getLayoutProperty(layerId, 'visibility') === 'visible';
+            const count = features.length;
+            const count2 = features2.length;            
+
             let countText = ' ';
-            if (isVisible) {
-                // Update the text content to show the number of visible points
+
+            // Check if fullLayerId is visible
+            if (map.getLayoutProperty(fullLayerId, 'visibility') === 'visible') {
                 countText = `( Puntos visibles: ${count} )`;
+            }
+            // Check if fullLayerId2 is visible
+            else if (map.getLayoutProperty(fullLayerId2, 'visibility') === 'visible') {
+                countText = `( Puntos visibles: ${count2} )`;
             }
 
             // Update the text content and apply a CSS class
             const countElement = document.getElementById(layerId + '-count');
-            countElement.textContent = countText;
-            countElement.className = 'count-label';
+            if (countElement) {
+                countElement.textContent = countText;
+                    }
         };
 
         map.on('moveend', function() {
@@ -474,6 +575,7 @@
             updatePointCount('boliches');
             updatePointCount('escuelas');
             updatePointCount('cines');
+            updateZoomLevelDisplay(); // Update on map load
         });
 
         map.on('load', function() {
@@ -497,8 +599,22 @@
                 updatePointCount('boliches');
                 updatePointCount('escuelas');
                 updatePointCount('cines');
+                updateZoomLevelDisplay(); // Update on map load
         });
-        
+    
+    document.getElementById('heatmap-opacity-slider').addEventListener('input', function(e) {
+        const opacity = parseFloat(e.target.value);
+
+        // Update the opacity of each heatmap layer
+        layerData.forEach(layer => {
+            map.setPaintProperty(layer.idPrefix+'-heatmap', 'heatmap-opacity', opacity);
+        });
+    });
+    function updateZoomLevelDisplay() {
+        const zoomLevel = map.getZoom().toFixed(1); // Get current zoom level with 2 decimal places
+        document.getElementById('zoom-level').textContent = zoomLevel;
+        }
+
     </script>
 </body>
 </html>

@@ -3,6 +3,7 @@
     top: 3%;
     left: 80px;
     z-index: 1000;
+    visibility: hidden;
 }
 #company-logo img {
     width: 100px;   /* Adjust the width as needed */
@@ -94,6 +95,10 @@
     font-weight: 500;
     margin-left: 5px;
     color: #555;
+}
+
+p {
+    font-size: 14px;
 }
 /*#legend-content div {
     /* Styling for individual legend items */
